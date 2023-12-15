@@ -75,8 +75,26 @@
     // 🧠 The methods work as one might expect, changing the value of `isOn` to the appropriate Boolean.
     // 🧠 The methods also return one of these two strings: "You turned the bulb ON", or "You turned the bulb OFF".
     class Bulb {
-
-    }
+      constructor(){
+        this.isOn=false
+      }
+        turnOn(){
+          this.isOn=true
+          return "You turned the bulb ON"
+        }
+        turnOff(){
+          this.isOn=false
+          return "You turned the bulb OFF"
+        }
+        toggle(){
+          if(this.isOn){
+            return this.turnOff()
+          }else{
+            return this.turnOn()
+          }
+        }
+      }
+    
 
     // 👉 CHALLENGE 4
     // 🧠 Build a CountDown class that can count down starting at any number we pass to the constructor.
